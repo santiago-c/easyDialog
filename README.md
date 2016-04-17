@@ -17,7 +17,7 @@ However, easyDialog.inc fixes that by introducing a "named dialog feature" which
 
 Show dialog to player
 ```
-Dialog_Show(playerid, dialog, style, caption[], info[], button1[], button2[]);
+Dialog_Open(playerid, dialog, style, caption[], info[], button1[], button2[], {Float,_}:...);
 ```
 
 Closes any opened dialogs.
