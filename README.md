@@ -6,14 +6,14 @@ Imagine having over 100 dialog checks under OnDialogResponse. It's just too mess
 
 However, easyDialog.inc fixes that by introducing a "named dialog feature" which allows scripters to declare a dialog by name, rather than ID.
 
-| Feature                       | OnDialogResponse       | easyDialog.inc  |
-| ----------------------------- |:----------------------:| :--------------:|
-| Crash Proof                   | No                     | Yes             |
-| Named Dialogs                 | No                     | Yes             |
-| Calling a dialog manually     | No                     | Yes             |
-| Custom callback for handling  | No                     | Yes             |
+| Feature                      | OnDialogResponse | easyDialog.inc |
+|------------------------------|:----------------:|:--------------:|
+| Crash Proof                  |        No        |       Yes      |
+| Named Dialogs                |        No        |       Yes      |
+| Calling a dialog manually    |        No        |       Yes      |
+| Custom callback for handling |        No        |       Yes      |
 
-#Functions
+# Functions
 
 Show dialog to player
 ```
@@ -30,7 +30,7 @@ Returns 1 if the dialog is opened for the specified player.
 Dialog_Opened(playerid);
 ```
 
-#Callback
+# Callback
 
 This callback is called before a dialog is shown to a player (using Dialog_Show, that is). Returning 0 under this callback will prevent the dialog from working.
 ```
@@ -40,7 +40,7 @@ public OnDialogPerformed(playerid, dialog[], response, success)
 }
 ```
 
-#Example
+# Example
 
 ```
 CMD:weapons(playerid, params[])

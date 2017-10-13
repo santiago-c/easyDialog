@@ -8,7 +8,14 @@
 	and a lot more.
 
 	Created by Emmet on Friday, January 24, 2014.
+
+	Updated by Southclaws 2017-10-13 to add include guard.
 */
+
+#if defined _easyDialog_included
+	#endinput
+#endif
+#define _easyDialog_included
 
 #if !defined isnull
 	#define isnull(%1) \
@@ -52,17 +59,17 @@ stock Dialog_Close(playerid)
 stock Dialog_Open(playerid, function[], style, caption[], info[], button1[], button2[], {Float,_}:...)
 {
 	static
-	    string[4096],
+		string[4096],
 		args
 	;
 
 	if (!strlen(info))
 	{
-	    return 0;
+		return 0;
 	}
 	if ((args = numargs()) > 7)
 	{
-	    while (--args >= 7)
+		while (--args >= 7)
 		{
 			#emit LCTRL 5
 			#emit LOAD.alt args
@@ -105,13 +112,13 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 	if (s_Public == cellmax)
 	{
-	    s_Public = funcidx("OnDialogPerformed");
+		s_Public = funcidx("OnDialogPerformed");
 	}
 
 	// Sanitize inputs.
 	for (new i = 0, l = strlen(inputtext); i < l; i ++)
 	{
-	    if (inputtext[i] == '%')
+		if (inputtext[i] == '%')
 		{
 			inputtext[i] = '#';
 		}
@@ -119,7 +126,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 	if (dialogid == 32700 && strlen(s_DialogName[playerid]) > 0)
 	{
 		new
-		    string[40];
+			string[40];
 
 		strcat(string, "dialog_");
 		strcat(string, s_DialogName[playerid]);
@@ -132,9 +139,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		}
 	}
 	#if defined DR_OnDialogResponse
-	    return DR_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
+		return DR_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
 	#else
-	    return 0;
+		return 0;
 	#endif
 }
 
