@@ -1,0 +1,9 @@
+{
+	"user": "Awsomedude",
+	"repo": "easyDialog",
+	"entry": "test.pwn",
+	"output": "test.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib"
+	]
+}
