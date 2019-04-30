@@ -76,3 +76,8 @@ public OnDialogPerformed(playerid, dialog[], response, success)
     return 1;
 }
 ```
+
+## Credits
+Emmet_ - for easyDialog
+Southclaws - for samp-ctl
+AliLogic - for const correctness
