@@ -79,5 +79,5 @@ public OnDialogPerformed(playerid, dialog[], response, success)
 
 ## Credits
 Emmet_ - for easyDialog
-Southclaws - for samp-ctl
+Southclaws - for sampctl
 AliLogic - for const correctness
