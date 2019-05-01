@@ -36,7 +36,7 @@ static
 	s_DialogOpened[MAX_PLAYERS]
 ;
 
-forward OnDialogPerformed(playerid, const dialog[], response, success);
+forward OnDialogPerformed(playerid, const dialog[], response, bool: success);
 
 forward @dialog_format(); @dialog_format() {
 	format("", 0, "");
