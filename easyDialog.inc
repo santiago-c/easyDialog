@@ -33,7 +33,7 @@
 
 static
 	s_DialogName[MAX_PLAYERS][32 char],
-	s_DialogOpened[MAX_PLAYERS]
+	bool: s_DialogOpened[MAX_PLAYERS]
 ;
 
 forward OnDialogPerformed(playerid, const dialog[], response, success);
@@ -51,7 +51,7 @@ public Dialog_IsOpened(playerid)
 stock Dialog_Close(playerid)
 {
 	s_DialogName[playerid]{0} = 0;
-	s_DialogOpened[playerid] = 0;
+	s_DialogOpened[playerid] = false;
 
 	return ShowPlayerDialog(playerid, -1, DIALOG_STYLE_MSGBOX, " ", " ", " ", "");
 }
@@ -98,7 +98,7 @@ stock Dialog_Open(playerid, const function[], style, const caption[], const info
 	{
 		ShowPlayerDialog(playerid, 32700, style, caption, info, button1, button2);
 	}
-	s_DialogOpened[playerid] = 1;
+	s_DialogOpened[playerid] = true;
 
 	strpack(s_DialogName[playerid], function, 32 char);
 
@@ -123,6 +123,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			inputtext[i] = '#';
 		}
 	}
+	
 	if (dialogid == 32700 && strlen(s_DialogName[playerid]) > 0)
 	{
 		new
