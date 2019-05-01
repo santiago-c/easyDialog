@@ -1,5 +1,7 @@
 # easyDialog
 
+### Note: You must use https://github.com/sampctl/samp-stdlib otherwise, you'll get more warnings!!
+
 The purpose of this include is to make dialogs easier to use in general.
 
 Imagine having over 100 dialog checks under OnDialogResponse. It's just too messy and most of the time, it's unorganized and harder to look for certain dialogs for future editing, and remembering certain dialog ID's can be a pain in the ass.
@@ -80,4 +82,4 @@ public OnDialogPerformed(playerid, dialog[], response, success)
 ## Credits
 Emmet_ - for easyDialog
 Southclaws - for sampctl
-AliLogic - for const correctness
+AliLogic - for const correction
