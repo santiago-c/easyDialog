@@ -92,11 +92,11 @@ stock Dialog_Open(playerid, const function[], style, const caption[], const info
 		#emit LCTRL 5
 		#emit SCTRL 4
 
-		ShowPlayerDialog(playerid, 32700, style, caption, string, button1, button2);
+	        ShowPlayerDialog (playerid, 32700 , style, caption[], info[], button1[], button2[]));
 	}
 	else
 	{
-		ShowPlayerDialog(playerid, 32700, style, caption, info, button1, button2);
+		ShowPlayerDialog (playerid, 32700 , style, caption[], info[], button1[], button2[]));
 	}
 	s_DialogOpened[playerid] = true;
 
